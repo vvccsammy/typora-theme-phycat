@@ -520,7 +520,7 @@ li.md-list-item {
   text-decoration-color:var(--element-color)
 } */
 
-.task-list-item input[type="checkbox"] + p span {
+.task-list-item input[type="checkbox"] ~ p span {
   display: inline; /* Changed from inline-block */
   text-decoration: none;
   background-image: linear-gradient(var(--element-color), var(--element-color));
@@ -530,7 +530,7 @@ li.md-list-item {
   transition: background-size 0.2s ease-in-out;
 }
 
-.task-list-item input[type="checkbox"]:checked + p span {
+.task-list-item input[type="checkbox"]:checked ~ p span {
   background-size: 100% 2px; /* Make strikethrough visible */
 }
 
