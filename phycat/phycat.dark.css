@@ -521,30 +521,17 @@ li.md-list-item {
 } */
 
 .task-list-item input[type="checkbox"] + p span {
-  position: relative;
-  display: inline-block;
+  display: inline; /* Changed from inline-block */
+  text-decoration: none;
+  background-image: linear-gradient(var(--element-color), var(--element-color));
+  background-repeat: no-repeat;
+  background-position: 0 55%; /* Adjust for vertical centering if needed */
+  background-size: 0% 2px; /* Initially invisible */
+  transition: background-size 0.2s ease-in-out;
 }
 
-.task-list-item input[type="checkbox"] + p span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 52%;
-  width: calc(100%*var(--check-line));
-  height: 2px;
-  background: var(--element-color);
-  transform: scaleX(0); 
-  transform-origin: left center;
-  transition: transform 0.2s ease-in-out; 
-}
-
-.task-list-item input[type="checkbox"]:checked + p span::after {
-  transform: scaleX(1); 
-}
-
-.task-list-item input[type="checkbox"]:not(:checked) + p span::after {
-  transform-origin: right center; 
-  transition-delay: 0.1s; 
+.task-list-item input[type="checkbox"]:checked + p span {
+  background-size: 100% 2px; /* Make strikethrough visible */
 }
 
 .task-list-item input:after {
