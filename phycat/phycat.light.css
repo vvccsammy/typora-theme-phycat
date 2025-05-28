@@ -6,29 +6,56 @@
  */
 
 /* 字体引入：鸿蒙字体 */
-
+/* 
 @font-face {
   font-family: "HarmonyOS_Sans_SC";
   font-weight: normal;
   font-style: normal;
   src: url("HarmonyOS_Sans_SC_Regular.woff");
-}
+} */
 
 @font-face {
+  font-family: "Open Sans";
+  font-weight: normal;
+  font-style: normal;
+  src: url("open-sans-v17-latin-ext_latin-regular.woff");
+}
+
+/* @font-face {
   font-family: "HarmonyOS_Sans_SC";
   font-weight: bold;
   font-style: normal;
   src: url("HarmonyOS_Sans_SC_Bold.woff");
-}
+} */
 
 @font-face {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-style: normal;
+  src: url("open-sans-v17-latin-ext_latin-700.woff");
+}
+
+
+
+/* @font-face {
   font-family: "CascadiaCode";
   src: url("Cascadia-Code-Regular.ttf");
+} */
+@font-face {
+  font-family: "FiraCode";
+  src: url("FiraCode-Regular.ttf");
 }
+
+/* html {
+  font-size: 16px;
+  font-family: "HarmonyOS_Sans_SC";
+  
+} */
 
 html {
   font-size: 16px;
-  font-family: "HarmonyOS_Sans_SC";
+  font-family: "Open Sans";
+
 }
 
 /* 打印页面设置 */
@@ -85,7 +112,8 @@ html {
   background-position: center center;
 }
 
-#write p {
+/* 正文字体 */
+/* #write p {
   color: #333;
   margin: 10px 10px;
   font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light,
@@ -93,6 +121,17 @@ html {
 
   font-size: 1rem;
   word-spacing: 2px;
+} */
+
+#write p {
+  color: #333;
+  margin: 10px 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  word-spacing: 2px;
+  /* 字体粗细 */
+  font-weight: 500;
+
 }
 
 #write h3:after,
@@ -262,9 +301,11 @@ h5 {
 .sidebar-content {
   counter-reset: h1
 }
+
 .outline-content {
   counter-reset: h1
 }
+
 .outline-h1 {
   counter-reset: h2
 }
@@ -316,14 +357,17 @@ h5 {
   counter-increment: h1;
   content: var(--autonum-h1);
 }
+
 #outline-content li.outline-h1>div>span.outline-label:before {
   counter-increment: h1;
   content: var(--autonum-h1);
 }
-.outline-content .outline-h1>.outline-item>.outline-label:before{
+
+.outline-content .outline-h1>.outline-item>.outline-label:before {
   counter-increment: h1;
   content: var(--autonum-h1);
 }
+
 #write span.md-toc-item.md-toc-h1>a:before {
   counter-increment: h1toc;
   content: var(--autonum-h1toc);
@@ -334,10 +378,12 @@ h5 {
   content: var(--autonum-h2);
   color: var(--head-title-h2-color);
 }
+
 .outline-content .outline-h2>.outline-item>.outline-label:before {
   counter-increment: h2;
   content: var(--autonum-h2);
 }
+
 li.outline-h2>div>a.outline-label:before {
   counter-increment: h2;
   content: var(--autonum-h2);
@@ -354,14 +400,17 @@ li.outline-h2>div>a.outline-label:before {
   content: var(--autonum-h3);
   color: var(--element-color);
 }
+
 #outline-content li.outline-h3>div>span.outline-label:before {
   counter-increment: h3;
   content: var(--autonum-h3);
 }
+
 .outline-content .outline-h3>.outline-item>.outline-label:before {
   counter-increment: h3;
   content: var(--autonum-h3);
 }
+
 #write span.md-toc-item.md-toc-h3>a:before {
   counter-increment: h3toc;
   content: var(--autonum-h3toc);
@@ -373,14 +422,17 @@ li.outline-h2>div>a.outline-label:before {
   content: var(--autonum-h4);
   color: var(--element-color);
 }
+
 #outline-content li.outline-h4>div>span.outline-label:before {
   counter-increment: h4;
   content: var(--autonum-h4);
 }
+
 .outline-content .outline-h4>.outline-item>.outline-label:before {
   counter-increment: h4;
   content: var(--autonum-h4);
 }
+
 #write span.md-toc-item.md-toc-h4>a:before {
   counter-increment: h4toc;
   content: var(--autonum-h4toc);
@@ -392,14 +444,17 @@ li.outline-h2>div>a.outline-label:before {
   content: var(--autonum-h5);
   color: var(--element-color);
 }
+
 #outline-content li.outline-h5>div>span.outline-label:before {
   counter-increment: h5;
   content: var(--autonum-h5);
 }
+
 .outline-content .outline-h5>.outline-item>.outline-label:before {
   counter-increment: h5;
   content: var(--autonum-h5);
 }
+
 #write span.md-toc-item.md-toc-h5>a:before {
   counter-increment: h5toc;
   content: var(--autonum-h5toc);
@@ -411,14 +466,17 @@ li.outline-h2>div>a.outline-label:before {
   content: var(--autonum-h6);
   color: var(--element-color);
 }
+
 #outline-content li.outline-h6>div>span.outline-label:before {
   counter-increment: h6;
   content: var(--autonum-h6);
 }
+
 .outline-content .outline-h6>.outline-item>.outline-label:before {
   counter-increment: h6;
   content: var(--autonum-h6);
 }
+
 #write span.md-toc-item.md-toc-h6>a:before {
   counter-increment: h6toc;
   content: var(--autonum-h6toc);
@@ -490,7 +548,7 @@ li.md-list-item {
 
 /* 任务列表样式 */
 
-.task-list-item input{
+.task-list-item input {
   width: 1.25rem;
   height: 1.25rem;
   display: block;
@@ -499,12 +557,12 @@ li.md-list-item {
   left: 4px;
 }
 
-.task-list-item input:focus{
+.task-list-item input:focus {
   outline: none;
   box-shadow: none;
 }
 
-.task-list-item input:before{
+.task-list-item input:before {
   border: 1px solid var(--element-color-deep);
   border-radius: 1.2rem;
   width: 1.2rem;
@@ -516,10 +574,10 @@ li.md-list-item {
 }
 
 .task-list-item input:checked:before,
-.task-list-item input[checked]:before{
+.task-list-item input[checked]:before {
   background: var(--element-color-soo-shallow);
   border-width: 2px;
-  display:inline-block;
+  display: inline-block;
   transition: background-color 200ms ease-in-out;
 }
 
@@ -533,18 +591,32 @@ li.md-list-item {
   text-decoration-color:var(--element-color)
 } */
 
-.task-list-item input[type="checkbox"] ~ p span {
-  display: inline; /* Changed from inline-block */
+.task-list-item input[type="checkbox"]~p span {
+  display: inline;
+  /* Changed from inline-block */
   text-decoration: none;
   background-image: linear-gradient(var(--element-color), var(--element-color));
   background-repeat: no-repeat;
-  background-position: 0 55%; /* Adjust for vertical centering if needed */
-  background-size: 0% 2px; /* Initially invisible */
+  background-position: 0 55%;
+  /* Adjust for vertical centering if needed */
+  background-size: 0% 2px;
+  /* Initially invisible */
   transition: background-size 0.2s ease-in-out;
 }
 
-.task-list-item input[type="checkbox"]:checked ~ p span {
-  background-size: 100% 2px; /* Make strikethrough visible */
+.task-list-item input[type="checkbox"]:checked~p span {
+  background-size: 100% 2px;
+  /* Make strikethrough visible */
+}
+
+
+.task-list-item input[type="checkbox"]:checked+p span::after {
+  transform: scaleX(1);
+}
+
+.task-list-item input[type="checkbox"]:not(:checked)+p span::after {
+  transform-origin: right center;
+  transition-delay: 0.1s;
 }
 
 .task-list-item input:after {
@@ -680,12 +752,20 @@ pre.md-meta-block {
 }
 
 /* 行内代码 */
-#write p code {
+/* #write p code {
   padding: 3px 3px 1px;
   color: var(--element-color-linecode);
   background: var(--element-color-linecode-background);
   border-radius: 3px;
   font-family: "CascadiaCode" monospace;
+  letter-spacing: 0.5px;
+} */
+#write p code {
+  padding: 3px 3px 1px;
+  color: var(--element-color-linecode);
+  background: var(--element-color-linecode-background);
+  border-radius: 3px;
+  font-family: "FiraCode" monospace;
   letter-spacing: 0.5px;
 }
 
@@ -695,9 +775,25 @@ pre.md-meta-block {
 
 /* 代码块 */
 
-.md-fences:not([lang="mermaid"])::before {
+/* .md-fences:not([lang="mermaid"])::before {
   content: attr(lang);
   font-family: "CascadiaCode" monospace;
+  text-align: right;
+  padding-right: 15px;
+  color: #7e7e7e;
+  display: block;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDUwcHgiIGhlaWdodD0iMTMwcHgiPgogIDxlbGxpcHNlIGN4PSI2NSIgY3k9IjY1IiByeD0iNTAiIHJ5PSI1MiIgc3Ryb2tlPSJyZ2IoMjIwLDYwLDU0KSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJyZ2IoMjM3LDEwOCw5NikiLz4KICA8ZWxsaXBzZSBjeD0iMjI1IiBjeT0iNjUiIHJ4PSI1MCIgcnk9IjUyIiAgc3Ryb2tlPSJyZ2IoMjE4LDE1MSwzMykiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0icmdiKDI0NywxOTMsODEpIi8+CiAgPGVsbGlwc2UgY3g9IjM4NSIgY3k9IjY1IiByeD0iNTAiIHJ5PSI1MiIgIHN0cm9rZT0icmdiKDI3LDE2MSwzNykiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0icmdiKDEwMCwyMDAsODYpIi8+Cjwvc3ZnPg==);
+  height: 30px;
+  width: 100%;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-color: #f8f8f8;
+  border-radius: 5px 5px 0 0;
+  background-position: 6px 10px;
+} */
+.md-fences:not([lang="mermaid"])::before {
+  content: attr(lang);
+  font-family: "FiraCode" monospace;
   text-align: right;
   padding-right: 15px;
   color: #7e7e7e;
@@ -720,10 +816,20 @@ pre.md-meta-block {
   margin-top: -0.5rem;
 }
 
-.cm-s-inner.CodeMirror {
+/* .cm-s-inner.CodeMirror {
   padding: 1.2rem 0.8rem;
   color: #4f5467;
   font-family: "CascadiaCode" monospace;
+  border-radius: 10px;
+  background-color: #fa0303;
+  /* border: 1px solid #eef2f5;*
+  line-height: 1.6rem;
+} */
+
+.cm-s-inner.CodeMirror {
+  padding: 1.2rem 0.8rem;
+  color: #4f5467;
+  font-family: "FiraCode" monospace;
   border-radius: 10px;
   background-color: #fa0303;
   /* border: 1px solid #eef2f5;*/
@@ -849,10 +955,23 @@ kbd:hover {
 }
 
 /** 表格内的单元格*/
+/* #write table tr th,
+#write table tr td {
+  font-size: 14px;
+  color: #000;
+} */
+
+
 #write table tr th,
 #write table tr td {
   font-size: 14px;
   color: #000;
+  border: 1px solid #dedddd;
+  /* 添加边框，使用较深的灰色 */
+  padding: 10px;
+  /* 添加内边距，使内容更整洁 */
+  white-space: nowrap;
+  /*阻止内容换行 */
 }
 
 #write .footnotes {
@@ -862,8 +981,10 @@ kbd:hover {
   border: 0.8px solid var(--element-color-deep);
 }
 
+/* 添加了table-layout:auto 根据内容调整列宽 */
 #write table.md-table {
   overflow: hidden;
+  table-layout: auto;
 }
 
 #write table thead {
@@ -897,8 +1018,11 @@ kbd:hover {
 
 /* 目录 */
 
-.md-toc * {
+/* .md-toc * {
   font-family: "HarmonyOS_Sans_SC";
+} */
+.md-toc * {
+  font-family: "Open Sans";
 }
 
 .md-tooltip-hide>span {
